@@ -1,19 +1,26 @@
 import Card from './Card';
+import styled from 'styled-components';
+
+const CardsStyle = styled.div`
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+`
 
 export default function Cards(props) {
    const { characters } = props;
    return (
-   <div>{
-         characters.map(({name,species,gender,image,onClose}) => {
-            return <Card 
-               name={name}
-               species={species}
-               gender={gender}
-               image={image}
-               onClose={onClose}
+      <CardsStyle>
+         {characters.map( character => (
+            <Card 
+               key={character.id}
+               name={character.name}
+               species={character.species}
+               gender={character.gender}
+               image={character.image}
+               onClose={() => props.onClose(character.id)}
             />
-         })
-      }
-   </div>
+         ))}
+      </CardsStyle>
    );
 }
