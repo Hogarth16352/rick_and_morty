@@ -3,6 +3,9 @@ import Cards from './components/Cards.jsx'
 import NavBar from './components/NavBar.jsx'
 import { useState } from 'react'
 import GlobalStyles from './styles/GlobalStyles';
+import {Routes,Route} from "react-router-dom";
+import About from './components/About/About';
+import Detail from './components/Detail/Detail';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -35,9 +38,13 @@ function App() {
       <div>
         <NavBar onSearch = {onSearch} />
       </div>
-      <div>
-      <Cards characters={characters} onClose={onClose} />
-      </div>
+      <Routes>
+        <Route path = "/about" element = {<About/>}/>
+        <Route path = "/home" element = 
+        {<Cards characters={characters} onClose={onClose}/>}
+        />
+        <Route path = "/detail/:detailId" element = {<Detail />}/>
+        </Routes>
     </div>
   )
 }

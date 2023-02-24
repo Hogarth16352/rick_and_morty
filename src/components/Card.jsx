@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const CardStyle = styled.div`
 position: relative;
@@ -21,7 +22,7 @@ const TextContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   width: 100%;
-  padding: 18px;
+  padding: 30px;
   box-sizing: border-box;
   margin: 0px;
 `
@@ -58,14 +59,20 @@ const Button = styled.button`
 `
 
 export default function Card(props) {   return (
-      <CardStyle>
+  <CardStyle>
         <hr />
+        <Link to = {`/detail/${props.id}`}>
          <Image  src={props.image} alt={props.name} />
+        </Link>
          <TextContainer>
+
          <Button onClick={props.onClose}>X</Button>
-         <Title>{props.name}</Title>
+
+        <Title>{props.name}</Title>
          <Subtitle>{props.species}</Subtitle>
          <Subtitle>{props.gender}</Subtitle>
+
+         
          </TextContainer>
          <hr />
       </CardStyle>
