@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("https://preview.redd.it/6s7kmh1x9hmz.png?auto=webp&s=4adab085ce93adfda4efa998363328495fcc7aa4") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 code {

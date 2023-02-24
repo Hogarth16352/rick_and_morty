@@ -1,0 +1,65 @@
+/* Estilo para contenedor principal */
+.container {
+  display: inline-block;
+  width: 100%;
+  margin: 1%;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilo para imagen */
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilo para el contenedor de botón */
+.buttonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Estilo para botón */
+.buttonContainer button {
+  background-color: #FFC107;
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilo para el contenedor de datos */
+.dataContainer {
+  background-color: #202020;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo para etiqueta de nombre */
+.dataContainer h2 {
+  margin: 0;
+}
+
+/* Estilo para especie y género */
+.dataContainer h4 {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Estilo para contenedor de fichas en pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    width: 80%;
+    margin: 1.5% auto;
+    position: relative;
+    text-align: center;
+  }
+}

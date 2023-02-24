@@ -1,17 +1,11 @@
-import Card from './Card';
-import styled from 'styled-components';
+import Card from '../Card/Card';
 
-const CardsStyle = styled.div`
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-`
 
 export default function Cards(props) {
    const { characters } = props;
    return (
-      <CardsStyle>
-         {characters.map( character => (
+      <div style={{display:"flex", justifyContent: "space-between"}}>
+         {characters.map(character => (
             <Card 
                id={character.id}
                key={character.id}
@@ -22,6 +16,6 @@ export default function Cards(props) {
                onClose={() => props.onClose(character.id)}
             />
          ))}
-      </CardsStyle>
+      </div>
    );
 }

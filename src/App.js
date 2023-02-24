@@ -1,11 +1,10 @@
-import './App.css'
-import Cards from './components/Cards.jsx'
-import NavBar from './components/NavBar.jsx'
-import { useState } from 'react'
-import GlobalStyles from './styles/GlobalStyles';
-import {Routes,Route} from "react-router-dom";
-import About from './components/About/About';
-import Detail from './components/Detail/Detail';
+import { useState } from "react";
+import "./App.css";
+import Cards from "./components/Cards/Cards.jsx";
+import NavBar from "./components/NavBar/NavBar";
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About/About.jsx";
+import Detail from "./components/Detail/Detail.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -34,7 +33,7 @@ function App() {
 
   return (
     <div className='App' style={{ padding: '25px' }}>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <div>
         <NavBar onSearch = {onSearch} />
       </div>
