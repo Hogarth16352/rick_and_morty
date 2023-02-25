@@ -31,10 +31,15 @@ export default function Detail(props) {
                 <button>Go Back</button>
             </Link>
             <h1>Detail</h1>
-            <h2>{character.name}</h2>
+            <h2>NAME: {character.name}</h2>
             <img src={character.image} alt={character.name} />
-            {character.origin && <h3>{character.origin.name}</h3>}
+            <h3>STATUS {character.status}</h3>
+            <h3>SPECIE: {character.species}</h3>
+            <h3>GENDER: {character.gender}</h3>
+            {character.origin && <h3>Origin: {character.origin.name}</h3>}
+
         </div>
+
     )
 }
 
