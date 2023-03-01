@@ -13,6 +13,9 @@ export default function NavBar(props) {
             <button>Home</button>
          </NavLink>
          <SearchBar onSearch={props.onSearch} />
+         <NavLink to="/">
+            <button>Logout</button>
+         </NavLink>
       </div>
    );
 }

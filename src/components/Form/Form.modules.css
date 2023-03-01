@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    margin-top: 20px;
+    color: black;
+    background-color: grey;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.warning {
+  color: red;
+    border: solid red 1px;
+    border-radius: 0.2em;
+  }
+  
+  .danger {
+    font-size: 10px;
+    color: red;
+    margin-left: 10em;
+  }
+  

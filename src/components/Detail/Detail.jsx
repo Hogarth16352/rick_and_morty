@@ -27,17 +27,18 @@ export default function Detail(props) {
 
     return (
         <div>
-            <Link to="/home">
-                <button>Go Back</button>
-            </Link>
             <h1>Detail</h1>
             <h2>NAME: {character.name}</h2>
             <img src={character.image} alt={character.name} />
-            <h3>STATUS {character.status}</h3>
+            <h3>STATUS: {character.status}</h3>
             <h3>SPECIE: {character.species}</h3>
             <h3>GENDER: {character.gender}</h3>
             {character.origin && <h3>Origin: {character.origin.name}</h3>}
-
+            <Link to="/home">
+            <div className={styles.container}>
+                <button>Go Back</button>
+            </div>
+            </Link>
         </div>
 
     )

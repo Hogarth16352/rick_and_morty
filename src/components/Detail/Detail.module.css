@@ -1,3 +1,13 @@
 div {
     color: white;
 }
+
+.container button {
+    background-color: #FFC107;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }

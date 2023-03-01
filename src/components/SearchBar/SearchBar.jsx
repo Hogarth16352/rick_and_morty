@@ -5,11 +5,18 @@ export default function SearchBar(props) {
    // props = { onSearch=función }
 
    const [character, setCharacter] = useState("");
-   const handleChange = e => {
-      const {value} = e.target;
+
+   const handleChange = element => {
+      const {value} = element.target;
       //console.log(e);
       setCharacter(value);
    }
+
+   const handleSearch = () => {//Para limpiar el contenedor despues de cada busqueda
+      props.onSearch(character);
+      setCharacter("");
+   }
+
 
    return (
     <div className={styles.container}>
@@ -17,9 +24,10 @@ export default function SearchBar(props) {
           type="search"
           name="search"   
           id="search"
+          value = {character}
           onChange={handleChange}
        />
-       <button onClick={() => props.onSearch(character)}>Agregar</button>
+       <button onClick={handleSearch}>Agregar</button>
     </div>
  );
 }

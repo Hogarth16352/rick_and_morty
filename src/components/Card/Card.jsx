@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Card(props) {
    return (
      <div className={styles.container}>
+      <hr></hr>
        <div className={styles.buttonContainer}>
          <button onClick={props.onClose} className={styles.closeButton}>X</button>
        </div>
